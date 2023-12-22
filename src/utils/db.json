@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Moses Nwaeze",
+    "email": "ogbonnasmart@gmail.com",
+    "role": "ADMIN",
+    "password": "12345"
+  },
+  {
+    "name": "Mike Jude",
+    "email": "mikejude@gmail.com",
+    "role": "REGULAR_USER",
+    "password": "12345"
+  }
+]
