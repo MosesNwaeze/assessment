@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useNavigate} from "react-router-dom";
+import {useNavigate, NavLink} from "react-router-dom";
 import db from "../../../utils/db.json"
 import {UserModelType} from "../../../models/userModel";
 
@@ -22,7 +22,11 @@ const AdminDashboard = () => {
     };
     return (
         <div className="text-center">
-            <h1 className="my-5">admin dashboard</h1>
+            <div className="d-flex justify-content-between my-5">
+                <h1 >admin dashboard</h1>
+                <NavLink to="/add-user">Add user</NavLink>
+            </div>
+
             <div className="table-responsive">
 
                 <table className="table">

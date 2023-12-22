@@ -7,6 +7,7 @@ import Register from "./pages/auth/register/register";
 import {UserModelType} from "./models/userModel";
 import Update from "./pages/auth/update/update";
 import UpdateUser from "./pages/auth/update/update";
+import AddUser from "./pages/dashboard/admin/users/add-user/add-user";
 
 
 export type AppContextType = {
@@ -53,6 +54,7 @@ function App() {
                      <Route path="update-user" element={<UpdateUser/>} />
                      <Route path="regular-user-dashboard" element={<RegularUserDashboard/>} />
                      <Route path="admin-dashboard" element={<AdminDashboard/>} />
+                     <Route path="add-user" element={<AddUser/>}/>
                  </Routes>
 
 

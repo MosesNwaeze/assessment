@@ -1,10 +1,10 @@
 import React, {useState, useContext} from 'react';
-import {UserRole,UserModelType} from "../../../models/userModel"
-import {AppContext} from "../../../App";
-import db from "../../../utils//db.json"
+import {UserRole,UserModelType} from "../../../../../models/userModel"
+import {AppContext} from "../../../../../App";
+import db from "../../../../../utils/db.json"
 import {useNavigate} from "react-router-dom";
 
-function Register() {
+function AddUser() {
     const [name, setName] = useState("");
     const [email, _setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -31,12 +31,12 @@ function Register() {
                 setIsAdmin(true);
                 setIsUserAuthenticated(true)
                 setEmail(email)
-                navigate("/admin-dashboard")
             }else if(role === "REGULAR_USER"){
                 setIsUserAuthenticated(true);
                 setEmail(email);
-                navigate("/regular-user-dashboard");
             }
+
+            navigate("/admin-dashboard")
         }
 
 
@@ -81,10 +81,10 @@ function Register() {
                     </label>
                 </div>
 
-                <button type="submit" className="btn btn-primary">SIGN UP</button>
+                <button type="submit" className="btn btn-primary">Add User</button>
             </form>
         </div>
     );
 }
 
-export default Register;
+export default AddUser;
